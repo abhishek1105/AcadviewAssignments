@@ -7,21 +7,21 @@ class Main
     Scanner ss=new Scanner (System.in);
     System.out.println("enter the no");
     int a=ss.nextInt();
-    int i,j,b;
-    for(i=0;i<=a;i++)
+    int i,j,b,c=0;
+    b=a;
+    while(b!=0)
     {
-      b=0;
-      for(j=1;j<=a;j++)
-      {
-      if(i%j==0)
-      {
-        b++;
-      }
+      j=b%10;
+      c=c+(j*j*j);
+      b=b/10;
     }
-    if(b==2)
+    if(a==c)
     {
-      System.out.println(i);
+      System.out.println("no is amstrong ");
     }
+    else
+    {
+      System.out.println("no is not amstrong ");
     }
     ss.close();
   }

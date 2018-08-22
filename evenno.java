@@ -7,22 +7,14 @@ class Main
     Scanner ss=new Scanner (System.in);
     System.out.println("enter the no");
     int a=ss.nextInt();
-    int i,j,b;
+    int i;
     for(i=0;i<=a;i++)
     {
-      b=0;
-      for(j=1;j<=a;j++)
+      if(i%2==0)
       {
-      if(i%j==0)
-      {
-        b++;
+        System.out.println(i);
       }
     }
-    if(b==2)
-    {
-      System.out.println(i);
-    }
-    }
     ss.close();
+    }
   }
-}
