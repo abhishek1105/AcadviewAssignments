@@ -1,23 +1,21 @@
 import java.lang.*;
 import java.util.*;
-class Main
+class Seclarge
 {
   public static void main(String [] aa)
   {
     Scanner ss=new Scanner (System.in);
-    System.out.println("enter the no");
-    int a=ss.nextInt();
-    int i=0,j,temp;
+    int a,i=0,temp=0;
+    System.out.println("enter the size");
+    a=ss.nextInt();
     int b[]=new int [a];
-    while(a!=0)
+    for(i=0;i<a;i++)
     {
       b[i]=ss.nextInt();
-      i++;
-      a--;
     }
     for(i=0;i<a-1;i++)
     {
-      for(j=0;j<a-i-1;j++)
+      for(int j=0;j<a-i-1;j++)
       {
         if(b[j]>b[j+1])
         {
@@ -27,10 +25,6 @@ class Main
         }
       }
     }
-    for(int q:b)
-    {
-      System.out.println(q);
-    }
-    ss.close();
+    System.out.println(b[a-2]);
   }
 }
